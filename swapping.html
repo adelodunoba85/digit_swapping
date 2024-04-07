@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Swapping</title>
+
+    <script src="swapping.js"></script>
+</head>
+<body>
+    <h1>Digit Swapping</h1>
+
+    <form id="numberForm" style="padding: 5pt;">
+        <label for="number">Enter a number of at least 3 digits: </label><br>
+        <input type="text" id="number" name="number"><br>
+
+        <input type="submit" value="Swap" style="border: solid; padding: 2pt; ">          
+    </form>
+
+    <section style="padding: 5pt;">
+        <div> Output: </div>
+        <div id="result1"> </div> <!-- Element to display the result -->
+        <div id="result2"> </div>
+
+    </section>
+
+    
+
+    <script>
+        document.getElementById('numberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            numberSwapping(); // Call the numberSwapping function
+        });
+
+        function displayResult1(result1) {
+            document.getElementById('result1').textContent = result1;
+        }
+
+        function displayResult2(result2) {
+            document.getElementById('result2').textContent = result2;
+        }
+    </script>
+</body>
+</html>
